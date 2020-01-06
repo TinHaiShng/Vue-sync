@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <div id="app">
+    <input v-model="value" v-model.sync="text"/>
+    <button @click="getValue">改改试试</button>
+  </div>
+  <script type="module">
+    import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.js';
+    new Vue({
+      el: "#app",
+      data:{
+        value: "我是model",
+        text: "我是text"
+      },
+      methods:{
+        getValue:function(){
+          console.log(this.value)
+        }
+      }
+    })
+  </script>
+</body>
+</html>
